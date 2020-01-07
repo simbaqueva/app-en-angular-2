@@ -1,0 +1,32 @@
+<div class="row">
+		<div class="col-lg-3">
+			<p>componente 1</p>
+			<form (submit)="addName()">
+			  <input [(ngModel)]="newName" name="newName" placeholder="Awesome Computer Scientist">
+			  <button type="submit">Add</button>
+			</form>
+
+
+
+			<ul>
+			  <li *ngFor="let name of names">{{name}}</li>
+			</ul>
+
+		</div>
+		<div class="col-lg-4">
+
+		   <sd-imagen></sd-imagen>
+		</div>
+		<div class="col-lg-4">
+
+		    <sd-texto></sd-texto>
+		</div>
+		<div class="col-lg-4">
+
+		    <sd-carrusel></sd-carrusel>
+		</div>
+		<div class="col-lg-4">
+
+		    <sd-validaciones></sd-validaciones>
+		</div>
+</div>

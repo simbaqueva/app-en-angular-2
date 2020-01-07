@@ -1,0 +1,23 @@
+
+
+<div class="col-lg-6">
+<p>Validaciones.</p>
+
+
+
+  
+<div  class="container">
+  <h1>Add user</h1>
+  <form (ngSubmit)="submitForm(validacion)" [formGroup]="validacion" novalidate class="f-label validate">
+    <div class="form-content">
+      <div class="form-group">
+        <label for="">Prueba</label>
+         <input type="text"  name="prueba"   formControlName="prueba"    id="datepicker" class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[30000]] epicker validip"  placeholder="" minlength="1" maxlength="30000" required>
+          </div>
+      </div>
+    <section class="form-submit">
+          <button [disabled]="!validacion.valid" type="submit" class="btn btn-form space6">REGISTRAR MI EMPRESA</button>
+        </section>
+
+  </form>
+</div>

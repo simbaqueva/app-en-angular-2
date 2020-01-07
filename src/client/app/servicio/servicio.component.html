@@ -1,0 +1,54 @@
+<header class="hed"> 
+
+
+<div class="col-lg-5">
+<h1 class="text">Servicios</h1>
+
+</div>
+
+</header>
+
+<div class="row">
+ <div class="col-lg-3">
+<div class="content">
+<div class="subcontent container">
+
+<h1>biblioteca</h1>
+<h3></h3>
+
+
+
+<h1></h1>
+<!--campo en el que buscamos  y llamamos  el bjeto que querenos mostrar-->
+<input value="ferrary" #item> 
+<!--boton por el cual se hace la busqueda y nostrae el resultado de la peticion-->
+<button (click)="listItems(item.value)">buscar</button> 
+<br>
+
+  <!--ciclo para mostrar el resultado del llamado al objeto-->
+      <div *ngFor="let litem of litems">
+        <img src={{litem.image}}>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-3">
+	   <sd-swiki></sd-swiki>
+</div>
+<div class="col-lg-3">
+   <sd-sbiblio></sd-sbiblio>
+ </div>
+   <div class="col-lg-3">
+       <sd-simg></sd-simg>
+   </div>
+   <div class="col-lg-3">
+       <sd-ciud></sd-ciud>
+   </div>
+ </div>
+
+		
+
+
+
+
+

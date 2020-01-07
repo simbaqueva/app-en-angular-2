@@ -1,0 +1,13 @@
+
+<div class="content">
+<div class="subcontent container">
+<h1>s.wikipedia</h1>
+    <p>Search after each keystroke</p>
+    <input #term (keyup)="search(term.value)"/>
+    <ul>
+      <li *ngFor="let item of items | async">{{item}}</li>
+    </ul>
+    <input class="omniture-search btn btn-default" type="submit" value="Buscar">
+    
+     </div>
+</div>

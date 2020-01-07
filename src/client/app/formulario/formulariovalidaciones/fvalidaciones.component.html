@@ -1,0 +1,221 @@
+
+<div class="col-lg-6">
+<p>Validaciones.</p>
+
+
+
+  
+<div  class="container">
+<h1>Add user</h1>
+<form (ngSubmit)="submitForm(validacion)" [formGroup]="validacion" novalidate class="f-label validate">
+<div class="form-content">
+  <div class="col-lg-4">
+<div class="form-group" [ngClass]="{'has-danger':validacion.controls.tcredito.errors?.rangeLength}">
+  <label for="">Tarjeta de credito</label>
+   <input type="text"  name="tcredito"   formControlName="tcredito"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[22]creditCard]  mask-creditcard "  placeholder="ingrese su numero de tarjeta de credito ." minlength="1" maxlength="22" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.tcredito.errors?.rangeLength"></small>
+  </div>
+  </div>
+
+  <div class="col-lg-4">
+<div class="form-group" [ngClass]="{'has-danger':validacion.controls.email.errors?.rangeLength}">
+  <label for="">EMAIL</label>
+   <input type="email"  name="email"   formControlName="email"    class="validacion-control validacion-control-danger validate[required,minSize[4],maxSize[50]email]  mas datepic"  placeholder="ingrese su correo ." minlength="1" maxlength="50" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.email.errors?.rangeLength"></small>
+  </div>
+</div>
+
+
+  <div class="col-lg-4">
+<div class="form-group" [ngClass]="{'has-danger':validacion.controls.telfijo.errors?.rangeLength}">
+  <label for="">TELEFONO FIJO</label>
+   <input type="text"  name="telfijo"   formControlName="telfijo"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[15]phone]  mask-tel datepic"  placeholder="ingrese su numero de telefono ." minlength="1" maxlength="15" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.telfijo.errors?.rangeLength"></small>
+  </div>
+  </div>
+
+  <div class="col-lg-4">
+<div class="form-group" [ngClass]="{'has-danger':validacion.controls.url.errors?.rangeLength}">
+  <label for="">PAGINA WEB</label>
+   <input type="text"  name="url"   formControlName="url"    class="validacion-control validacion-control-danger validate[
+   required,minSize[1],maxSize[30000]url]  mas datepic"  placeholder="ingrese url de una pagia web ." minlength="1" maxlength="30000" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.url.errors?.rangeLength"></small>
+  </div>
+</div>
+
+  <div class="col-lg-4">
+  <div class="form-group" [ngClass]="{'has-danger':validacion.controls.password.errors?.rangeLength}">
+  <label for="">CONTRASEÑA</label>
+   <input type="text"  name="password"   formControlName="password"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[4]password]  mas datepic"  placeholder="ingrese su contraseña ." minlength="1" maxlength="4" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.password.errors?.rangeLength"></small>
+  </div>
+  </div>
+
+  <div class="col-lg-4">
+<div class="form-group" [ngClass]="{'has-danger':validacion.controls.confirmpassword.errors?.rangeLength}">
+  <label for="">CONFIRMAR PASSWORD</label>
+   <input type="text"  name="confirmpassword"   formControlName="confirmpassword"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[4]equals]  mas datepic"  placeholder="confirme su contraseña ." minlength="1" maxlength="4" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.confirmpassword.errors?.rangeLength"></small>
+  </div>
+  </div>
+
+  
+  <div class="col-lg-4">
+  <div class="form-group" [ngClass]="{'has-danger':validacion.controls.pesos.errors?.rangeLength}">
+  <label for="">INGRESOS</label>
+   <input type="text"  name="pesos"   formControlName="pesos"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[16]]  mask-pesos datepic"  placeholder="ingrese sus ingresos ." minlength="1" maxlength="16" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.pesos.errors?.rangeLength"></small>
+  </div>
+  </div>
+
+
+  <div class="col-lg-4">
+  <div class="form-group" [ngClass]="{'has-danger':validacion.controls.GT.errors?.rangeLength}">
+  <label for="">MAYOR QUE</label>
+   <input type="text"  name="GT"   formControlName="GT"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[30000]]  mas datepic"  placeholder="ingrese un numero mayor a... ." minlength="1" maxlength="30000" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.GT.errors?.rangeLength"></small>
+  </div>
+  </div>
+
+  <div class="col-lg-4">
+  <div class="form-group" [ngClass]="{'has-danger':validacion.controls.LT.errors?.rangeLength}">
+  <label for="">MENOR QUE</label>
+   <input type="text"  name="LT"   formControlName="LT"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[30000]]  mas datepic"  placeholder="ingrese numero menor que.... ." minlength="1" maxlength="30000" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.LT.errors?.rangeLength"></small>
+  </div>
+  </div>
+
+  <div class="col-lg-4">
+<div class="form-group" [ngClass]="{'has-danger':validacion.controls.dateISO.errors?.rangeLength}">
+  <label for="">FECHA INTERNACIONAL</label>
+   <input type="text"  name="dateISO"   formControlName="dateISO"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[30000]]  mask-dateISO datepic"  placeholder="ingrese una fecha en formato internacional ." minlength="1" maxlength="30000" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.dateISO.errors?.rangeLength"></small>
+  </div>
+  </div>
+
+
+
+<div class="col-lg-4">
+  <div class="form-group" [ngClass]="{'has-danger':validacion.controls.thumbnailImg.errors?.rangeLength}">
+  <label for="">IMAGEN EN BASE64</label>
+   <input type="text"  name="thumbnailImg"   formControlName="thumbnailImg"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[30000]]  mas datepic"  placeholder="ingrese su imagen en base64 ." minlength="1" maxlength="30000" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.thumbnailImg.errors?.rangeLength"></small>
+  </div>
+  </div>
+
+
+<div class="col-lg-4">
+    <div class="form-group" [ngClass]="{'has-danger':validacion.controls.rango.errors?.rangeLength}">
+      <label for="">RANGO</label>
+       <input type="text"  name="rango"   formControlName="rango"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[30000]]  mas datepic"  placeholder="ingrese un numero ." minlength="1" maxlength="30000" required>
+         <small class="form-control-feedback" *ngIf="validacion.controls.rango.errors?.rangeLength"></small>
+    </div>
+  </div>
+
+<div class="col-lg-4">
+    <div class="form-group" [ngClass]="{'has-danger':validacion.controls.digitos.errors?.rangeLength}">
+      <label for="">SOLO DIGITOS</label>
+       <input type="text"  name="digitos"   formControlName="digitos"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[30000]]  mas datepic"  placeholder="ingrese un numero ." minlength="1" maxlength="30000" required>
+         <small class="form-control-feedback" *ngIf="validacion.controls.digitos.errors?.rangeLength"></small>
+    </div>
+  </div>
+
+<div class="col-lg-4">
+    <div class="form-group" [ngClass]="{'has-sdanger':validacion.controls.json.errors?.rangeLength}">
+      <label for="">ARCHIVO JSON</label>
+       <input type="text"  name="json"   formControlName="json"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[30000]]  mas datepic"  placeholder="ponga el cdigo de un archivo json ." minlength="1" maxlength="30000" required>
+         <small class="form-control-feedback" *ngIf="validacion.controls.json.errors?.rangeLength"></small>
+    </div>
+  </div>
+
+<div class="col-lg-4">
+    <div class="form-group" [ngClass]="{'has-danger':validacion.controls.nigual.errors?.rangeLength}">
+  <label for="">NO ES IGUAL A</label>
+   <input type="text"  name="nigual"   formControlName="nigual"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[30000]]   datepic"  placeholder="ingrese un numero ." minlength="1" maxlength="30000" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.nigual.errors?.rangeLength"></small>
+  </div>
+  </div>
+
+<div class="col-lg-4">
+  <div class="form-group" [ngClass]="{'has-danger':validacion.controls.nigual2.errors?.rangeLength}">
+  <label for="">NO ES IGUAL A </label>
+   <input type="text"  name="nigual2"   formControlName="nigual2"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[30000]]  mas datepic"  placeholder="ingrese un numero ." minlength="1" maxlength="30000" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.nigual2.errors?.rangeLength"></small>
+  </div>
+  </div>
+
+<div class="col-lg-4">
+  <div class="form-group" [ngClass]="{'has-danger':validacion.controls.nigual3.errors?.rangeLength}">
+  <label for="">NO ES IGAUAL "333"</label>
+   <input type="text"  name="nigual3"   formControlName="nigual3"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[30000]]  mas datepic"  placeholder="ingrese un numero ." minlength="1" maxlength="30000" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.nigual3.errors?.rangeLength"></small>
+  </div>
+</div>
+
+<div class="col-lg-4">
+  <div class="form-group" [ngClass]="{'has-danger':validacion.controls.minandmax.errors?.rangeLength}">
+  <label for="">ENTRE MINIMO Y MAXIMO</label>
+   <input type="text"  name="minandmax"   formControlName="minandmax"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[30000]]  mas datepic"  placeholder="ingrese un numero ." minlength="1" maxlength="30000" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.minandmax.errors?.rangeLength"></small>
+  </div>
+  </div>
+
+<div class="col-lg-4">
+    <div class="form-group" [ngClass]="{'has-danger':validacion.controls.vip.errors?.rangeLength}">
+  <label for="">IP</label>
+   <input type="text"  name="vip"   formControlName="vip"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[30000]]  mask-ip datepic"  placeholder="ingrese ip." minlength="1" maxlength="30000" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.vip.errors?.rangeLength"></small>
+  </div>
+</div>
+
+
+
+<div class="col-lg-4">
+ <div class="form-group" [ngClass]="{'has-danger':validacion.controls.campo1.errors?.rangeLength}">
+  <label for="">SOLO NUMEROS</label>
+   <input type="text"  name="campo1"   formControlName="campo1"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[30000]]  mas datepic"  placeholder="ingrese numeros." minlength="1" maxlength="30000" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.campo1.errors?.rangeLength"></small>
+  </div>
+</div>
+
+
+
+<div class="col-lg-4">
+   <label for="">DATEPICKER</label>
+   <input type="text"  class="datepicker"  placeholder="SELECCIONE LA FECHA" required>
+      </div>
+
+      <div class="col-lg-4">
+   <label for="">DATEPICKER MIN</label>
+   <input type="text"  class="datepicker1"  placeholder="SELECCIONE LA FECHA" required>
+      </div>
+
+      <div class="col-lg-4">
+   <label for="">DATEPICKER MAX</label>
+   <input type="text"  class="datepicker2"  placeholder="SELECCIONE LA FECHA" required>
+      </div>
+
+      <div class="col-lg-4">
+   <label for="">DATEPICKER MIN AND MAX</label>
+   <input type="text"  class="datepicker3"  placeholder="SELECCIONE LA FECHA" required>
+      </div>
+
+<div class="col-lg-4">
+    <div class="form-group" [ngClass]="{'has-danger':validacion.controls.igual.errors?.rangeLength}">
+  <label for="">ES IGUAL A</label>
+   <input type="text"  name="igual"   formControlName="igual"    class="validacion-control validacion-control-danger validate[required,minSize[1],maxSize[30000]]   datepic"  placeholder="ingrese un numero ." minlength="1" maxlength="30000" required>
+     <small class="form-control-feedback" *ngIf="validacion.controls.igual.errors?.rangeLength"></small>
+  </div>
+  </div>
+
+
+</div>
+<section class="form-submit">
+      <button [disabled]="!validacion.valid" type="submit" class="btn btn-form space6">REGISTRAR MI EMPRESA</button>
+     
+    </section>
+
+</form>
+
+
+</div>

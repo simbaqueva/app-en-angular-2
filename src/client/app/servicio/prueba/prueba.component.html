@@ -1,0 +1,22 @@
+
+<div class="content">
+<div class="subcontent container">
+<h1>prueba</h1>
+<h3></h3>
+
+
+
+<h1></h1>
+<input name="search" #item> 
+<button (click)="listItems(item.value)">Search</button> 
+<br>
+
+<div *ngFor="let litem of litems"> <img class="imgs" src="{{litem.image}}"><!-- {{litem.nombre}} {{litem.apellido}} {{litem.edad}} --> 
+</div>
+     </div>
+</div>
+
+
+
+
+
