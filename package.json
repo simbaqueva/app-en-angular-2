@@ -165,7 +165,7 @@
     "ng2-webstorage": "^1.5.1",
     "rxjs": "^5.2.0",
     "systemjs": "0.19.41",
-    "underscore": "^1.8.3",
+    "underscore": "^1.12.1",
     "zone.js": "^0.7.7"
   }
 }
